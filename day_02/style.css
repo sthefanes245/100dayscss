@@ -1,0 +1,162 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 20px;
+    box-shadow: 4px 8px 16px 0 rgba(52, 174, 174, 0.532);
+    overflow: hidden;
+    background: #86cadd;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80px;
+    height: 60px;
+}
+
+.line {
+    position: absolute;
+    width: 80px;
+    height: 8px;
+    background-color: rgb(223, 217, 220);
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px rgba(158, 222, 214, 0.819);
+}
+
+.line:nth-child(1) {
+    animation: line1-animation 1s forwards;
+}
+
+.line:nth-child(2) {
+    animation: line2-animation 1s forwards;
+}
+
+.line:nth-child(3) {
+    animation: line3-animation 1s forwards;
+}
+/*se a animação não funcionar depois de rodar uma vez o erro pode estar a partir daqui*/
+/*esses definem a velocidade da animação e forwards- O elemento manterá os 
+valores de estilo definidos pelo último quadro-chave (depende da direção da 
+animação e da contagem de iterações da animação), no caso a animação do "close" */
+.container.close .line:nth-child(1) {
+    animation: line1-close-animation 1s forwards;
+}
+
+.container.close .line:nth-child(2) {
+    animation: line2-close-animation 1s forwards;
+}
+
+.container.close .line:nth-child(3) {
+    animation: line3-close-animation 1s forwards;
+}
+
+@keyframes line1-close-animation {
+    0% {
+        transform: translatey(-20px);
+        /*se tiver algum valor a primeira linha vai subir de acordo 
+        com o valor colocado */
+    }
+
+    50% {
+        transform: translatey(0px);
+        /*se tiver algum valor a primeira linha vai descer de acordo 
+        com o valor colocado */
+    }
+
+    100% {
+        transform: rotate(45deg);
+        /*define quantos "graus" a linha vai girar na animação*/
+    }
+}
+
+@keyframes line2-close-animation {
+    0% {
+        transform: scale(100%);
+        /*é o que faz a linha do meio "desaparecer"*/
+    }
+
+    100% {
+        transform: scale(0%);
+        /*se colocar algum valor a linha do meio aparece na animação*/
+    }
+}
+
+@keyframes line3-close-animation {
+    0% {
+        transform: translatey(20px);
+        /*se for -20px a terceira linha se esconde durante a animação, 
+        no positivo faz com que a animação funcione, a linha desce e sobe a
+        distancia certa*/
+    }
+
+    50% {
+        transform: translatey(0px);
+    }
+
+    100% {
+        transform: rotate(135deg);
+    }
+}
+
+@keyframes line1-animation {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    50% {
+        transform: translatey(0px)
+            /* se colocar algo a primera linha desce na animação*/
+            rotate(0deg);
+    }
+
+    100% {
+        transform: translatey(-20px);
+        /*primeira linha */
+    }
+}
+
+@keyframes line2-animation {
+
+    /*altera a linha do meio */
+    0% {
+        transform: scale(0%);
+        /*quanto maior a % mais a linhado meio aparece no meio da animação,fica feio */
+    }
+
+    100% {
+        transform: scale(100%);
+        /* altera a kinha do meio, define de acordo com a % se ela vai ficar mais
+         a frente(o mesmo tamanho que as outras) ou mais atras(menor)*/
+    }
+}
+
+@keyframes line3-animation {
+
+    /*altera coisas da animação, como diferença de altura */
+    0% {
+        transform: rotate(135deg);
+    }
+
+    50% {
+        transform: translatey(0px) rotate(0deg);
+    }
+
+    100% {
+        transform: translatey(20px);
+        /*a ultima linha não volta pro mesmo lugar se mudar aqui */
+    }
+}

@@ -1,0 +1,117 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #fff;
+    color: #333;
+}
+
+.circle {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #7ddffc;
+    animation: darken 4s linear infinite;
+}
+
+.sol-container{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 20px;
+    left: -10px;
+    animation: spin 4s linear infinite;
+}
+
+.sol {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #e1e960;
+    box-shadow: 0 0 12px #fff; /*sombreado*/
+}
+
+.piramide { /*parte da frente da piramide, a mais escura */
+    position: absolute;
+    top: -10px;
+    height: 100%;
+    width: 100%;
+    background: #dedbdd;
+    clip-path: polygon(50% 50%, 0 100%, 75% 100%);
+}
+
+.piramide2 { 
+    position: absolute;
+    top: -10px;
+    height: 100%;
+    width: 100%;
+    background: white;
+    clip-path: polygon(50% 50%, 100% 100%, 75% 100%);
+}
+
+.sombra {
+    position: absolute;
+    top: 70%;
+    left: 23%;
+    width: 53%;
+    height: 50%;
+    z-index: 1;
+    clip-path: polygon(100% 0, 0 0, 100% 0);
+    background:rgba(0, 0, 0, 0.236);
+    animation: shadow-animation 4s linear infinite;
+}
+
+.areia {
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    background: yellow;
+    bottom: 0;
+}
+@keyframes spin {/*é a parte que faz o sol girar*/
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes darken {/*opacidade durante a animação*/
+    0% {
+        opacity: 0; 
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0;
+    }
+}
+
+@keyframes shadow-animation {
+    0% {
+        clip-path: polygon(100% 0, 0 0, 100% 0);
+    }
+    25% {
+        clip-path: polygon(100% 0, 0 0, 100% 50%);
+    }
+    40% {
+        clip-path: polygon(100% 0, 0 0, 5% 75%);
+    }
+    60% {
+        clip-path: polygon(100% 0, 5% 0, 0 10%);
+    }
+    65% {
+        clip-path: polygon(100% 0, 5% 0, 0 0);
+    }
+}

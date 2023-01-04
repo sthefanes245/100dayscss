@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+
+.frame {
+    font-family: 'Space Grotesk', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*top e left vão coloca-lo no meio*/
+    width: 400px;
+    height: 400px;
+    /*width e heigth dão o tamanho da caixa*/
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.5);
+    background: rgb(223, 76, 186);
+    background: -webkit-linear-gradient(bottom left, #dc26c1 0%, #55e4e9 100%);
+    /*Só se colocar o "webkit" que o degrade funciona, pesquisar sobre */
+}
+
+.center {
+    position: absolute;
+    top: 50.8%;
+    left: 50.5%;
+    transform: translate(-50%, -50%);
+    /*coloca o texto no meio certinho, pois ele estava mais pro canto */
+}
+
+.number {
+    position: relative;
+    height: 100px;
+    width: 200px;
+
+}
+
+.one-one {
+    position: absolute;
+    z-index: 1;
+    /*A z-indexpropriedade especifica a ordem da pilha de um elemento.
+Um elemento com ordem de pilha maior está sempre na frente de um 
+elemento com ordem de pilha menor. */
+    top: 0;
+    left: -16px;
+    height: 40px;
+    width: 20px;
+    background: #fff;
+    border-radius: 3px;
+    transform: rotate(50deg);
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+}
+
+.one-two {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0px;
+    height: 100px;
+    width: 24px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+}
+
+.zero-one,
+.zero-two {
+    position: absolute;
+    z-index: 8;
+    top: 0;
+    left: 17px;
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 24px solid #fff;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+}
+
+.zero-two {
+    z-index: 6;
+    left: 100px;
+}
+
+.big {
+    position: relative;
+    z-index: 20;
+    display: block;
+    font-size: 82px;
+    line-height: 70px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 6px;
+    color: white;
+}
+
+.small {
+    position: relative;
+    z-index: 20;
+    display: block;
+    font-size: 23px;
+    line-height: 20px;
+    /*altura da linha */
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .04em;
+    color: white;
+}
