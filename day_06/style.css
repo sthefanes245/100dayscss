@@ -1,0 +1,150 @@
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 5px;
+    box-shadow: 4px 8px 16px 0px rgba(0, 0, 0, 0.8);
+    background: rgba(127, 245, 247, 0.861);
+    overflow: hidden;
+    color: rgba(0, 224, 245, 0.996);
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 320px;
+    width: 320px;
+    background: rgba(254, 254, 254, 0.819);
+    border-radius: 5px;
+    justify-content: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+
+.perfil {
+    float: left;
+    width: 200px;
+    height: 320px;
+    text-align: center;
+}
+
+.imagem {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 38px auto 0 auto;
+}
+
+img {
+    display: block;
+    border-radius: 50%;
+    background: rgba(0, 224, 245, 0.996);
+}
+
+.nome {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.trabalho {
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.op {
+    margin-top: 33px;
+}
+
+.ac {
+    display: block;
+    width: 120px;
+    height: 30px;
+    margin: 0 auto 10px auto;
+    background: none;
+    border: 1px solid rgba(0, 224, 245, 0.996);
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+    color: rgba(0, 224, 245, 0.996);
+}
+
+.op .ac:hover {
+    background-color: rgba(0, 224, 245, 0.996);
+    color: #fff
+}
+
+.circle {
+    position: absolute;
+    box-sizing: border-box;
+    width: 76px;
+    height: 76px;
+    top: -3px;
+    left: -3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 224, 245, 0.996) rgba(0, 224, 245, 0.996) rgba(0, 224, 245, 0.996) transparent;
+    border-radius: 50%;
+    transition: all 1.5s ease-in-out;
+}
+
+.circle:nth-child(2) {
+    width: 82px;
+    height: 82px;
+    top: -6px;
+    left: -6px;
+    border-color: rgba(0, 224, 245, 0.996) transparent rgba(0, 224, 245, 0.996) rgba(0, 224, 245, 0.996);
+}
+
+.circle:nth-child(1):hover {
+    transform: rotate(360deg);
+}
+
+.circle:nth-child(2):hover {
+    transform: rotate(-360deg);
+}
+
+.dados {
+    float: left;
+}
+
+.box {
+    box-sizing: border-box;
+    width: 120px;
+    height: 99px;
+    background: rgba(158, 247, 248, 0.861);
+    text-align: center;
+    padding-top: 28px;
+    margin: 6px;
+    border-radius: 5px;
+}
+
+.dados .box:hover {
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    background: rgba(0, 224, 245, 0.996);
+    color: rgb(255, 255, 255);
+}
+
+span {
+    display: block;
+}
+
+.valor {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.partes {
+    font-size: 11px;
+}
